@@ -27,53 +27,53 @@ Open terminal and try execute some kali linux commands
 
 Find out the ip address of the attackers system
 
-![Alt text](<Screenshot at 2025-04-12 05-39-04.png>)
+![Alt text](<img/Screenshot at 2025-04-12 05-39-04.png>)
 
 Invoke msfconsole
 
-![Alt text](ex05(3).png)
+![Alt text](img/ex05(3).png)
 
 Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
 
-![Alt text](msfconsole.png)
+![Alt text](img/msfconsole.png)
 
-![Alt text](questionmark.png)
+!![Alt text](img/questionmark.png)
 
 Following command is executed for scanning the systems on our local area network with a TCP scan (-sT) looking for open ports between 1 and 1000 (-p1-1000). msf > nmap -sT 192.168.228.247/24 -p1-1000
 
-![Alt text](nmapstip.png)
+![Alt text](img/nmapstip.png)
 
 use the db-nmap command to scan and save the results into Metasploit's postgresql attached database. In that way, you can use those results in the exploitation stage later.
 
 scan the targets with the command db_nmap as follows. msf > db_nmap 192.168.228.247/24
 
-![Alt text](dbnmap1.png)
+![Alt text](img/dbnmap1.png)
 
-![Alt text](dbnmap2.png)
+![Alt text](img/dbnmap2.png)
 
 Metasploit has a multitude of scanning modules built in. If we open another terminal, we can navigate to Metasploit's auxiliary modules and list all the scanner modules. cd /usr/share /metasploit-framework/modules/auxiliary kali > ls -l
 
-![Alt text](cdls-l.png)
+![Alt text](img/cdls-l.png)
 
 
 Search is a powerful command in Metasploit that you can use to find what you want to locate. msf >search name:Microsoft type:exploit
 
-![Alt text](cdusrls-l.png)
+![Alt text](img/cdusrls-l.png)
 
 The info command provides information regarding a module or platform
-
-![Alt text](infoauxiliary.png)
+![Alt text](img/infoauxiliary.png)
 
 ##MYSQL ENUMERATION Find the IP address of the Metasploitable machine first. Then, use the db_nmap command in msfconsole with Nmap flags to scan the MySQL database at 3306 port. db_nmap -sV -sC -p 3306 <metasploitable_ip_address>
 
-![Alt text](dbnmap-sv-sc-p3306.png)
+![Alt text](img/dbnmap-sv-sc-p3306.png)
 
-![Alt text](<search nmap.png>)
+![Alt text](<img/search nmap.png>)
 
-![Alt text](searchtypeauxiliary.png)
 
-![Alt text](use11auxsetrhostrun.png)
+![Alt text](img/searchtypeauxiliary.png)
 
+
+![Alt text](img/use11auxsetrhostrun.png)
 
 
 
